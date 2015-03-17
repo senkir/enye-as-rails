@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+    android = Platform.create(name: 'Android')
+    Platform.create(name: 'iOS')  
+
+    kelvim = Product.create(name: 'Kelvim', version: '1.0.2', description: 'Find the weather in kelvim!')
+    kelvim.platform = android
+    kelvim.save
+
