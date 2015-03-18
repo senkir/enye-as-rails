@@ -2,11 +2,24 @@
 <html>
 <head>
   <title>EnyeAsRails</title>
+  <%= html_import_tag 'application'%>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_tag 'components/webcomponentsjs/webcomponents-min.js' =%>
+  <%= html_import_tag 'components/core-scaffold/core-scaffold.html' =%>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+    <core-scaffold>
+        <core-toolbar> @actionBarTitle </core-toolbar>
+        <core-menu theme="core-light-theme">
+            <core-item name="thing"></core-item>
+        </core-menu>
+        <div>
+            @content
+        </div>
+    </core-scaffold>
 
 <%= yield %>
 
