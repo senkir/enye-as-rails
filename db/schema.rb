@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150315155131) do
     t.string   "name"
     t.integer  "platform_id"
     t.string   "version"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
